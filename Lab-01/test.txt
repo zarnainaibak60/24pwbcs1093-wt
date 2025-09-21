@@ -1,0 +1,4 @@
+Create a file called test.txt and add any text inside it. Save the file and commit it with a message
+describing the addition. After this, delete the test.txt file, commit the deletion with another
+message, and push both changes to the repository. This demonstrates file tracking and removal in
+Git.
