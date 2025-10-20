@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Navigation System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-brand">FlexNav</div>
+
+
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#">Home</a></li>
+
+      <li class="dropdown">
+        <a href="#">Services ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">App Development</a></li>
+          <li><a href="#">SEO</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <aside class="sidebar">
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <h1>Welcome to the Flexbox Navigation Demo</h1>
+    <p>
+      This example shows how to build a responsive navigation system using only Flexbox.
+      Resize the screen to see the hamburger menu and vertical stacking behavior on mobile.
+    </p>
+  </main>
+
+  <script>
+
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

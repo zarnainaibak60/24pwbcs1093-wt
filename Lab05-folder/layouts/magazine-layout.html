@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Magazine Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        .magazine-grid {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "feature sidebar"
+                "gallery sidebar"
+                "footer footer";
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        .header {
+            grid-area: header;
+            background: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        .feature {
+            grid-area: feature;
+            background: #f0f0f0;
+            padding: 20px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: #ddd;
+            padding: 20px;
+        }
+
+        .gallery {
+            grid-area: gallery;
+            background: #ccc;
+            padding: 20px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Tablet */
+        @media (max-width: 1024px) {
+            .magazine-grid {
+                grid-template-areas:
+                    "header header"
+                    "feature feature"
+                    "sidebar sidebar"
+                    "gallery gallery"
+                    "footer footer";
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .magazine-grid {
+                grid-template-areas:
+                    "header"
+                    "feature"
+                    "sidebar"
+                    "gallery"
+                    "footer";
+                grid-template-columns: 1fr;
+            }
+
+            body {
+                font-size: 16px;
+            }
+
+            .feature,
+            .sidebar,
+            .gallery {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="magazine-grid">
+        <header class="header">Magazine Header</header>
+        <article class="feature">Feature Article</article>
+        <section class="sidebar">Sidebar</section>
+        <section class="gallery">Image Gallery</section>
+        <footer class="footer">Footer</footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positioning Challenge</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <header>
+      <h1>Positioning Challenge</h1>
+      <p>Responsive layout using fixed, sticky, and absolute positioning</p>
+    </header>
+
+    <div class="container">
+
+      <aside class="sidebar">
+        <div class="sticky-box">
+          <h2>Sticky Sidebar</h2>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+      </aside>
+
+
+      <main class="content">
+        <h2>Welcome to the Positioning Demo</h2>
+        <p>
+          This layout demonstrates different CSS positioning methods and how
+          they interact responsively. Scroll down to see sticky elements and
+          open the modal for absolute positioning.
+        </p>
+        <button id="click me">click me</button>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra
+          ex vel nisl tincidunt, nec blandit lacus feugiat. Quisque non
+          fermentum arcu. Sed at diam sed arcu sagittis viverra.
+        </p>
+        <p>
+          Integer fermentum, justo vitae cursus placerat, mi justo bibendum
+          urna, id suscipit sapien magna et lacus. Pellentesque habitant morbi
+          tristique senectus et netus et malesuada fames ac turpis egestas.
+        </p>
+      </main>
+    </div>
+
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <span id="closeModal">&times;</span>
+        <h2>Modal Dialog</h2>
+        <p>
+          This modal is absolutely positioned. On mobile, it becomes
+          full-screen!
+        </p>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    
+    const modal = document.getElementById("modal");
+    const openBtn = document.getElementById("openModal");
+    const closeBtn = document.getElementById("closeModal");
+
+    openBtn.onclick = () => (modal.style.display = "flex");
+    closeBtn.onclick = () => (modal.style.display = "none");
+    window.onclick = (e) => {
+      if (e.target === modal) modal.style.display = "none";
+    };
+  </script>
+</html>

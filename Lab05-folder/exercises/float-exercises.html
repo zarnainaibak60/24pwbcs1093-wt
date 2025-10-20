@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Float Exercises</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            padding: 40px 20px;
+            background: #f9f9f9;
+            color: #222;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 6px;
+        }
+
+        .float-two-col {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .float-two-col .left,
+        .float-two-col .right {
+            float: left;
+            width: 50%;
+            padding: 16px;
+            min-height: 100px;
+        }
+
+        .float-two-col .left {
+            background: #e0e0e0;
+        }
+
+        .float-two-col .right {
+            background: #f0f0f0;
+        }
+
+        .float-gallery {
+            margin-top: 20px;
+        }
+
+        .float-gallery img {
+            float: left;
+            width: 200px;
+            height: auto;
+            margin: 0 10px 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Float-Based Layouts</h1>
+
+    <h2>Exercise 3: Two-Column Float Layout</h2>
+    <div class="float-two-col">
+        <div class="left">Left Column</div>
+        <div class="right">Right Column</div>
+        <div class="clear"></div>
+    </div>
+
+    <h2>Exercise 4: Float-Based Image Gallery</h2>
+    <div class="float-gallery">
+        <img src="../assets/img/1755972947743.jpeg" alt="Image 1" />
+        <img src="../assets/img/t6.jpeg" alt="Image 2" />
+        <img src="../assets/img/giorgio-trovato-K62u25Jk6vo-unsplash.jpg" alt="Image 3" />
+        <div class="clear"></div>
+    </div>
+
+</body>
+
+</html>

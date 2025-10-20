@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Preference Media Queries</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            padding: 20px;
+            background: white;
+            color: black;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #121212;
+                color: #f0f0f0;
+            }
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        /* High Contrast */
+        @media (prefers-contrast: more) {
+            body {
+                background: black;
+                color: yellow;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                font-size: 12pt;
+                color: black;
+                background: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Preference Demo</h1>
+    <p>This page adapts to user preferences like dark mode, motion, and contrast.</p>
+
+</body>
+
+</html>

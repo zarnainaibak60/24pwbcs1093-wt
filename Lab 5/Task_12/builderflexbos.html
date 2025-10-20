@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Flexbox Form Builder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Responsive Form Builder</h1>
+      <p>Built with Flexbox and responsive breakpoints</p>
+    </header>
+
+    <main class="form-container">
+      <form>
+        <section class="form-section">
+          <h2>Personal Information</h2>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" placeholder="Enter first name" />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" placeholder="Enter last name" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="example@email.com" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="+92 300 1234567" />
+            </div>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2>Address Information</h2>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="street">Street Address</label>
+              <input type="text" id="street" placeholder="123 Main St" />
+            </div>
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" id="city" placeholder="Your City" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="country">Country</label>
+              <select id="country">
+                <option>Pakistan</option>
+                <option>USA</option>
+                <option>UK</option>
+                <option>Canada</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="zip">ZIP / Postal Code</label>
+              <input type="text" id="zip" placeholder="12345" />
+            </div>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2>Preferences</h2>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Gender</label>
+              <div class="radio-group">
+                <label
+                  ><input type="radio" name="gender" value="male" /> Male</label
+                >
+                <label
+                  ><input type="radio" name="gender" value="female" />
+                  Female</label
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subscribe">Subscribe to Newsletter</label>
+              <input type="checkbox" id="subscribe" /> Yes, keep me updated
+            </div>
+          </div>
+        </section>
+
+        <!-- Submit -->
+        <div class="form-actions">
+          <button type="submit">Submit</button>
+          <button type="reset" class="reset-btn">Reset</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

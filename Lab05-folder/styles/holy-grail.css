@@ -1,0 +1,123 @@
+/* Shared styles */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+header,
+nav,
+main,
+aside,
+footer {
+  padding: 10px;
+  background: #ddd;
+  margin: 5px;
+}
+
+/* Float Layout */
+.float-layout header,
+.float-layout footer {
+  clear: both;
+}
+
+.float-layout nav {
+  float: left;
+  width: 20%;
+}
+
+.float-layout main {
+  float: left;
+  width: 60%;
+}
+
+.float-layout aside {
+  float: left;
+  width: 20%;
+}
+
+@media (max-width: 768px) {
+  .float-layout nav,
+  .float-layout main,
+  .float-layout aside {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* Flexbox Layout */
+.flex-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-body {
+  display: flex;
+}
+
+.flex-body nav {
+  width: 20%;
+}
+
+.flex-body main {
+  width: 60%;
+}
+
+.flex-body aside {
+  width: 20%;
+}
+
+@media (max-width: 768px) {
+  .flex-body {
+    flex-direction: column;
+  }
+
+  .flex-body nav,
+  .flex-body main,
+  .flex-body aside {
+    width: 100%;
+  }
+}
+
+/* Grid Layout */
+.grid-layout {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+  grid-template-columns: 20% 1fr 20%;
+  gap: 5px;
+}
+
+.grid-layout header {
+  grid-area: header;
+}
+
+.grid-layout nav {
+  grid-area: nav;
+}
+
+.grid-layout main {
+  grid-area: main;
+}
+
+.grid-layout aside {
+  grid-area: aside;
+}
+
+.grid-layout footer {
+  grid-area: footer;
+}
+
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+}

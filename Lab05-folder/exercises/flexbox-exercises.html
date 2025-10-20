@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Exercises</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        .flex-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .box {
+            flex: 1;
+            background: #ddd;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            background: #f0f0f0;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Flexbox Exercises</h1>
+
+    <h2>Exercise 7: Horizontal Flex Layout</h2>
+    <div class="flex-row">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+    <h2>Exercise 8: Centered Flexbox Card</h2>
+    <div class="flex-center">
+        <div class="card">
+            <h3>Centered Card</h3>
+            <p>This card is centered using Flexbox.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

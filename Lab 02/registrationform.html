@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+</head>
+<body>
+
+  <h1>Student Registration Form</h1>
+  <header>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./navigation.html">navigation</a></li>
+          <li><a href="./profile.html">profile</a></li>
+          <li><a href="./registrationform.html">registrationform</a></li>
+          <li><a href="./schedule.html">schedule</a></li>
+           <li><a href="./index.html">back to home</a></li>
+        </ul>
+      </nav>
+    </header>
+
+  <form action="#" method="post">
+
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="regno">Registration Number:</label><br>
+    <input type="text" id="regno" name="regno" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="course">Select Course:</label><br>
+    <select id="course" name="course" required>
+      <option value="Select course">Select Course</option>
+      <option value="cs">Computer Science</option>
+      <option value="ee">Electrical Engineering</option>
+      <option value="me">Mechanical Engineering</option>
+      <option value="ce">Civil Engineering</option>
+      <option value="mech">Mechatronics</option>
+    </select><br><br>
+
+        <label>Semester:</label><br>
+
+    <input type="radio" id="spring" name="semester" value="Spring" required>
+    <label for="spring">Spring</label><br>
+
+    <input type="radio" id="summer" name="semester" value="Summer">
+    <label for="summer">Summer</label><br>
+
+    <input type="radio" id="fall" name="semester" value="Fall">
+    <label for="fall">Fall</label><br><br>
+
+     <input type="checkbox" id="terms" name="terms" required>
+    <label for="terms">
+      I agree to the <a href="#" target="_blank">Terms and Conditions</a>
+    </label><br><br>
+
+    <button type="submit">submit</button>
+
+
+</body>
+</html>

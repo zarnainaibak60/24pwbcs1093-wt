@@ -1,0 +1,53 @@
+.block {
+  display: block;
+  background: lightblue;
+  margin: 5px;
+}
+
+.inline {
+  display: inline;
+  background: lightgreen;
+  margin: 5px;
+}
+
+.inline-block {
+  display: inline-block;
+  background: lightcoral;
+  width: 100px;
+  height: 50px;
+  margin: 5px;
+}
+
+.table {
+  display: table;
+  border: 1px solid black;
+}
+
+.table-row {
+  display: table-row;
+}
+
+.table-cell {
+  display: table-cell;
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+/* Responsive display changes */
+@media (max-width: 600px) {
+  .inline-block {
+    display: block;
+  }
+
+  .table {
+    display: block;
+  }
+}

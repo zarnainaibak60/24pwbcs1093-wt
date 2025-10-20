@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Breakpoint Demo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        .box {
+            background: lightgray;
+            padding: 20px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        /* Tablet (768px and up) */
+        @media (min-width: 768px) {
+            .box {
+                background: lightblue;
+                font-size: 18px;
+            }
+        }
+
+        /* Small Desktop (1024px and up) */
+        @media (min-width: 1024px) {
+            .box {
+                background: lightgreen;
+                font-size: 20px;
+            }
+        }
+
+        /* Large Desktop (1200px and up) */
+        @media (min-width: 1200px) {
+            .box {
+                background: lightcoral;
+                font-size: 22px;
+            }
+        }
+
+        /* Extra Large (1400px and up) */
+        @media (min-width: 1400px) {
+            .box {
+                background: gold;
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Breakpoint Demo</h1>
+    <div class="box">Resize the screen to see changes</div>
+
+</body>
+
+</html>

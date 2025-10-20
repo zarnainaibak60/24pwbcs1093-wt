@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Data Table</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-table th,
+        .data-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Tablet: Card layout */
+        @media (max-width: 1024px) {
+            .data-table {
+                border: 0;
+            }
+
+            .data-table thead {
+                display: none;
+            }
+
+            .data-table tr {
+                display: block;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                padding: 10px;
+            }
+
+            .data-table td {
+                display: block;
+                text-align: right;
+                position: relative;
+                padding-left: 50%;
+            }
+
+            .data-table td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+
+        /* Mobile: Stacked layout */
+        @media (max-width: 768px) {
+            .data-table td {
+                padding-left: 40%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Responsive Table</h1>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <tr>
+                <td data-label="Name">Faizan Khan</td>
+                <td data-label="Role">Developer</td>
+                <td data-label="Email">faizan@example.com</td>
+            </tr>
+            </tr>
+            <tr>
+                <td data-label="Name">Ayesha Noor</td>
+                <td data-label="Role">Designer</td>
+                <td data-label="Email">ayesha@example.com</td>
+            </tr>
+            <tr>
+                <td data-label="Name">Ali Raza</td>
+                <td data-label="Role">Manager</td>
+                <td data-label="Email">ali@example.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

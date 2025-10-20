@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Positioning Exercises</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .content {
+            margin-top: 60px;
+        }
+
+        .relative-box {
+            position: relative;
+            background: #eee;
+            padding: 40px;
+            margin-top: 40px;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Positioning Exercises</h1>
+
+    <h2>Exercise 5: Fixed Header</h2>
+    <header class="fixed-header">Fixed Header</header>
+    <div class="content">
+        <p>Scroll down to see the fixed header stay in place.</p>
+        <p style="margin-top: 300px;">More content...</p>
+    </div>
+
+    <h2>Exercise 6: Absolute Positioned Box</h2>
+    <div class="relative-box">
+        <div class="absolute-box">I'm absolutely positioned</div>
+        <p>This box is relatively positioned. The inner box is placed absolutely.</p>
+    </div>
+
+</body>
+
+</html>

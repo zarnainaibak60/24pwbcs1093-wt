@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+header {
+  background: #eee;
+  padding: 10px;
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+  background: #333;
+  padding: 10px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  margin-top: 20px;
+}
+
+.boxes {
+  display: flex;
+  gap: 10px;
+}
+
+.box {
+  flex: 1;
+  background: #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Mobile First */
+.breakpoint span {
+  font-weight: bold;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  .breakpoint span {
+    color: blue;
+  }
+
+  .boxes {
+    flex-direction: column;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+
+  .breakpoint span {
+    color: green;
+  }
+
+  .boxes {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,50 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.sidebar {
+  float: left;
+  width: 30%;
+  background: #eee;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.main-content {
+  float: right;
+  width: 68%;
+  background: #f9f9f9;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.float-img {
+  float: left;
+  margin: 0 10px 10px 0;
+  width: 150px;
+  height: auto;
+}
+
+/* Clearfix */
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar,
+  .main-content {
+    float: none;
+    width: 100%;
+  }
+
+  .float-img {
+    float: none;
+    display: block;
+    margin: 0 auto 10px;
+  }
+}

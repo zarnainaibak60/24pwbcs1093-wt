@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Media Query Exercises</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        /* Exercise 11 */
+        .responsive-box {
+            background: lightgray;
+            padding: 20px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        /* Tablet */
+        @media (min-width: 768px) {
+            .responsive-box {
+                background: lightblue;
+                font-size: 18px;
+            }
+        }
+
+        /* Desktop */
+        @media (min-width: 1024px) {
+            .responsive-box {
+                background: lightgreen;
+                font-size: 20px;
+            }
+        }
+
+        /* Exercise 12 */
+        .orientation-box {
+            background: #eee;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Landscape */
+        @media (orientation: landscape) {
+            .orientation-box {
+                background: coral;
+                font-weight: bold;
+            }
+        }
+
+        /* Portrait */
+        @media (orientation: portrait) {
+            .orientation-box {
+                background: gold;
+                font-style: italic;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Media Query Exercises</h1>
+
+    <h2>Exercise 11: Responsive Box</h2>
+    <div class="responsive-box">Resize me!</div>
+
+    <h2>Exercise 12: Orientation-Based Styling</h2>
+    <div class="orientation-box">Rotate your device</div>
+
+</body>
+
+</html>

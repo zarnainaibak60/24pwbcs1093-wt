@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query Demonstration</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="breakpoint-indicator">
+      Current: <span id="screen-size">Desktop</span>
+    </div>
+
+    <header class="header">
+      <h1>Responsive Demo</h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <button
+          class="menu-toggle"
+          onclick="document.querySelector('.nav ul').classList.toggle('open')"
+        >
+          ☰
+        </button>
+      </nav>
+    </header>
+
+    <main class="content">
+      <section class="intro">
+        <h2>Responsive Layout & Typography Demo</h2>
+        <p>
+          This page demonstrates how layouts, font sizes, and navigation change
+          across screen sizes using CSS media queries.
+        </p>
+      </section>
+
+      <section class="grid-demo">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Resize the browser window to see the media queries in action!</p>
+    </footer>
+
+    <script>
+      const screenSizeText = document.getElementById("screen-size");
+
+      function updateBreakpoint() {
+        const width = window.innerWidth;
+        if (width <= 600) {
+          screenSizeText.textContent = "Mobile (≤600px)";
+        } else if (width <= 900) {
+          screenSizeText.textContent = "Tablet (≤900px)";
+        } else {
+          screenSizeText.textContent = "Desktop (>900px)";
+        }
+      }
+
+      window.addEventListener("resize", updateBreakpoint);
+      updateBreakpoint();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+/* Visibility */
+.show-mobile {
+  display: block;
+}
+.show-tablet,
+.show-desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .show-mobile {
+    display: none;
+  }
+  .show-tablet {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .show-tablet {
+    display: none;
+  }
+  .show-desktop {
+    display: block;
+  }
+}
+
+/* Spacing */
+.margin-sm {
+  margin: 10px;
+}
+.margin-md {
+  margin: 20px;
+}
+.margin-lg {
+  margin: 30px;
+}
+
+/* Text Alignment */
+.text-center {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .text-left-md {
+    text-align: left;
+  }
+}
+@media (min-width: 1024px) {
+  .text-right-lg {
+    text-align: right;
+  }
+}
+
+/* Flexbox Utilities */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.flex-column-md {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .flex-column-md {
+    flex-direction: row;
+  }
+}

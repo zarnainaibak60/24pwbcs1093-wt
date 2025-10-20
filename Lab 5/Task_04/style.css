@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2b2d42;
+  color: white;
+  padding: 1em 2em;
+  position: relative;
+  z-index: 10;
+}
+
+.nav-brand {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Main Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 1.5em;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ef233c;
+}
+
+/* ===== Dropdown Menu ===== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  background: #3a3d5c;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 160px;
+  border-radius: 5px;
+}
+
+.dropdown-menu li {
+  padding: 0.5em 1em;
+}
+
+.dropdown-menu li a {
+  color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+/* ===== Hamburger Menu (hidden on desktop) ===== */
+.hamburger {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 200px;
+  background: #edf2f4;
+  padding: 1em;
+  float: left;
+  height: calc(100vh - 70px);
+}
+
+.sidebar h3 {
+  color: #2b2d42;
+  margin-bottom: 0.5em;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  color: #2b2d42;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.sidebar a:hover {
+  color: #ef233c;
+}
+
+/* ===== MAIN CONTENT ===== */
+.content {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  /* Navbar becomes vertical */
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #2b2d42;
+    width: 100%;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Sidebar becomes stacked below navbar */
+  .sidebar {
+    width: 100%;
+    float: none;
+    height: auto;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  /* Dropdown stacks vertically */
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: flex;
+  }
+}
+
+/* ===== Hamburger Animation (optional) ===== */
+.hamburger.open {
+  transform: rotate(90deg);
+  transition: transform 0.4s ease;
+}

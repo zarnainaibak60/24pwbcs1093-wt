@@ -1,0 +1,176 @@
+
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f6fa;
+  color: #333;
+}
+
+.breakpoint-indicator {
+  background: #007bff;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #202940;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none;
+  background: #007bff;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Main Content */
+.content {
+  padding: 2rem;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.intro p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grid Demo */
+.grid-demo {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.box {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.footer {
+  text-align: center;
+  background: #202940;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+
+@media (max-width: 900px) {
+  body {
+    background-color: #e7eefc;
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav ul {
+    gap: 1rem;
+  }
+
+  .grid-demo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intro h2 {
+    font-size: 1.6rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+  body {
+    background-color: #fff7f0;
+  }
+
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    background: #333;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .nav ul.open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 0.5rem;
+    border-bottom: 1px solid #444;
+  }
+
+  .grid-demo {
+    grid-template-columns: 1fr;
+  }
+
+  .intro h2 {
+    font-size: 1.4rem;
+  }
+
+  .intro p {
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (min-width: 901px) {
+  .intro h2 {
+    font-size: 2rem;
+  }
+
+  .intro p {
+    font-size: 1.1rem;
+  }
+}

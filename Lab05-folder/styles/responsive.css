@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer";
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  position: relative;
+}
+
+.header {
+  grid-area: header;
+  background: #333;
+  color: white;
+  padding: 20px;
+}
+
+.nav {
+  grid-area: nav;
+  background: #555;
+  color: white;
+  padding: 10px;
+}
+
+.main {
+  grid-area: main;
+}
+
+.aside {
+  grid-area: aside;
+  background: #eee;
+  padding: 10px;
+}
+
+.footer {
+  grid-area: footer;
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project {
+  background: #f0f0f0;
+  padding: 20px;
+  flex: 1 1 calc(33.333% - 20px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.decorative {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: gold;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .project {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+
+  .project {
+    flex: 1 1 100%;
+  }
+
+  .decorative {
+    position: static;
+    text-align: center;
+    margin-top: 10px;
+  }
+}

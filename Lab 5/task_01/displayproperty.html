@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display Properties Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1, h2 {
+      color: #333;
+      text-align: center;
+    }
+
+    .display-section {
+      margin-bottom: 30px;
+    }
+
+    .block-example div {
+      display: block;
+      background-color: lightcoral;
+      color: white;
+      margin: 5px 0;
+      padding: 10px;
+    }
+
+    .inline-example span {
+      display: inline;
+      background-color: lightseagreen;
+      color: white;
+      margin: 5px;
+      padding: 10px;
+    }
+
+    .inline-block-example div {
+      display: inline-block;
+      background-color: lightblue;
+      color: black;
+      margin: 5px;
+      padding: 10px;
+      width: 100px;
+      text-align: center;
+    }
+
+
+    .table-display {
+      display: table;
+      border: 2px solid #555;
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+
+    .table-row {
+      display: table-row;
+    }
+
+    .table-cell {
+      display: table-cell;
+      border: 1px solid #777;
+      padding: 10px;
+      text-align: center;
+    }
+    .responsive-box {
+      background-color: cornflowerblue;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    @media (max-width: 800px) {
+      .responsive-box {
+        background-color: orange;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .responsive-box {
+        background-color: crimson;
+        display: block;
+      }
+    }
+
+    .hidden-example {
+      background-color: lightgray;
+      padding: 15px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .hide-mobile {
+      background-color: tomato;
+      color: white;
+      padding: 10px;
+    }
+
+    .hide-desktop {
+      background-color: teal;
+      color: white;
+      padding: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .hide-mobile {
+        display: none;
+      }
+    }
+
+    @media (min-width: 601px) {
+      .hide-desktop {
+        display: none;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Display Properties Demonstration</h1>
+
+  <div class="display-section">
+    <h2>Block Elements</h2>
+    <div class="block-example">
+      <div>Block 1</div>
+      <div>Block 2</div>
+      <div>Block 3</div>
+    </div>
+  </div>
+
+  <div class="display-section">
+    <h2>Inline Elements</h2>
+    <div class="inline-example">
+      <span>Inline 1</span>
+      <span>Inline 2</span>
+      <span>Inline 3</span>
+    </div>
+  </div>
+
+  <div class="display-section">
+    <h2>Inline-Block Elements</h2>
+    <div class="inline-block-example">
+      <div>Box 1</div>
+      <div>Box 2</div>
+      <div>Box 3</div>
+    </div>
+  </div>
+
+  <div class="display-section">
+    <h2>Table Display Without Table Markup</h2>
+    <div class="table-display">
+      <div class="table-row">
+        <div class="table-cell">Header 1</div>
+        <div class="table-cell">Header 2</div>
+        <div class="table-cell">Header 3</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">Row 1 Col 1</div>
+        <div class="table-cell">Row 1 Col 2</div>
+        <div class="table-cell">Row 1 Col 3</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">Row 2 Col 1</div>
+        <div class="table-cell">Row 2 Col 2</div>
+        <div class="table-cell">Row 2 Col 3</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="display-section">
+    <h2>Responsive Behavior</h2>
+    <div class="responsive-box">
+      Resize the window to see color changes at 800px and 500px breakpoints.
+    </div>
+  </div>
+
+  <div class="display-section">
+    <h2>Hidden Elements on Different Screens</h2>
+    <div class="hidden-example">
+      <div class="hide-mobile">Hidden on Mobile (below 600px)</div>
+      <div class="hide-desktop">Hidden on Desktop (above 600px)</div>
+    </div>
+  </div>
+
+</body>
+</html>

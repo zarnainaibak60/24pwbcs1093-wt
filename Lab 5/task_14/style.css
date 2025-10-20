@@ -1,0 +1,135 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f7f9fc;
+  color: #333;
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #0a0a23;
+}
+
+.header p {
+  color: #555;
+}
+
+
+.table-container {
+  overflow-x: auto;
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.responsive-table th,
+.responsive-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.responsive-table th {
+  background: #0a0a23;
+  color: white;
+  font-weight: 600;
+}
+
+.responsive-table tr:hover {
+  background-color: #f3f6ff;
+}
+
+
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: #777;
+}
+
+
+@media (max-width: 992px) {
+  .responsive-table {
+    display: block;
+  }
+
+  .responsive-table thead {
+    display: none; 
+  }
+
+  .responsive-table tbody {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .responsive-table tr {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+
+  .responsive-table td {
+    border: none;
+    padding: 0.5rem 0;
+  }
+
+  .responsive-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #0a0a23;
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .responsive-table tbody {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .responsive-table tr {
+    width: 100%;
+  }
+
+  .responsive-table td {
+    font-size: 0.95rem;
+    padding: 0.7rem 0;
+  }
+
+  .responsive-table td::before {
+    font-size: 0.85rem;
+    color: #555;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+}
