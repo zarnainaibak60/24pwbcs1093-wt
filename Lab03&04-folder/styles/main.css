@@ -1,0 +1,139 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Basic Selectors */
+.highlight {
+  background-color: #ffffcc;
+}
+
+#unique {
+  color: crimson;
+  font-weight: bold;
+}
+
+* {
+  font-family: sans-serif;
+}
+
+/* Attribute Selectors */
+input[type="email"] {
+  border: 2px solid green;
+}
+
+a[target="_blank"] {
+  color: teal;
+}
+
+input[placeholder*="Name"] {
+  background-color: #f0f8ff;
+}
+
+/* Combinators */
+.parent p {
+  color: navy;
+}
+
+.parent > div > p {
+  font-style: italic;
+}
+
+.parent + .sibling {
+  color: red;
+}
+
+.parent ~ .sibling {
+  text-decoration: underline;
+}
+
+/* Pseudo-classes */
+a:hover {
+  background-color: yellow;
+}
+
+input:focus {
+  border-color: blue;
+}
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  color: green;
+}
+
+li:nth-child(2) {
+  font-style: italic;
+}
+
+.intro::first-letter {
+  font-size: 200%;
+  color: purple;
+}
+
+.intro::after {
+  content: " ← styled with ::after";
+  color: gray;
+}
+
+.box-model .box {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #333;
+  background-color: #e0f7fa;
+  width: 200px;
+}
+
+.outline-box {
+  margin: 20px;
+  padding: 20px;
+  outline: 2px dashed #f44336;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  width: 200px;
+}
+
+.transform-box {
+  width: 150px;
+  height: 150px;
+  background-color: #4caf50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.transform-box:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.transition-btn {
+  padding: 10px 20px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+.transition-btn:hover {
+  background-color: #0d47a1;
+  transform: scale(1.05);
+}

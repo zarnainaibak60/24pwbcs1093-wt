@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors Exercise</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <style>
+        /* Inline styles for Exercise 1 */
+        h1 {
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Selectors Practice</h1>
+
+    <!-- Basic Selectors -->
+    <p>This is a paragraph (element selector).</p>
+    <div class="highlight">This uses a class selector.</div>
+    <span id="unique">This uses an ID selector.</span>
+    <section>Universal selector applies here too.</section>
+
+    <!-- Attribute Selectors -->
+    <input type="text" placeholder="Name" />
+    <input type="email" placeholder="Email" />
+    <a href="https://uetpeshawar.edu.pk" target="_blank">UET Website</a>
+
+    <!-- Combinators -->
+    <div class="parent">
+        <p>Descendant combinator</p>
+        <div>
+            <p>Child combinator</p>
+        </div>
+        <p class="sibling">Adjacent sibling</p>
+        <p class="sibling">General sibling</p>
+    </div>
+
+    <!-- Pseudo-classes -->
+    <a href="#">Hover over this link</a>
+    <input type="text" placeholder="Focus me" />
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+
+    <!-- Pseudo-elements -->
+    <p class="intro">This paragraph uses ::first-letter and ::after.</p>
+</body>
+
+</html>

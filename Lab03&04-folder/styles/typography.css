@@ -1,0 +1,59 @@
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.playfair {
+  font-family: "Playfair Display", serif;
+}
+
+.fira {
+  font-family: "Fira Code", monospace;
+}
+
+.px {
+  font-size: 18px;
+}
+
+.em {
+  font-size: 1.5em;
+}
+
+.rem {
+  font-size: 1.2rem;
+}
+
+.percent {
+  font-size: 120%;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.shadowed {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1: CSS Selectors Practice</title>
+    <style>
+        /* Basic Selectors */
+        h2 {
+            color: darkblue;
+        }
+
+        .highlight {
+            background-color: #ffffcc;
+        }
+
+        #unique {
+            font-weight: bold;
+            color: crimson;
+        }
+
+        p {
+            font-style: italic;
+        }
+
+        * {
+            font-family: sans-serif;
+        }
+
+        /* Attribute Selectors */
+        input[type="email"] {
+            border: 2px solid green;
+        }
+
+        a[target="_blank"] {
+            color: teal;
+        }
+
+        input[placeholder*="Name"] {
+            background-color: #f0f8ff;
+        }
+
+        /* Combinators */
+        .parent p {
+            color: navy;
+        }
+
+        .parent>div>p {
+            font-style: italic;
+        }
+
+        .parent+.sibling {
+            color: red;
+        }
+
+        .parent~.sibling {
+            text-decoration: underline;
+        }
+
+        /* Pseudo-classes */
+        a:hover {
+            background-color: yellow;
+        }
+
+        input:focus {
+            border-color: blue;
+        }
+
+        li:first-child {
+            font-weight: bold;
+        }
+
+        li:last-child {
+            color: green;
+        }
+
+        li:nth-child(2) {
+            font-style: italic;
+        }
+
+        /* Pseudo-elements */
+        .intro::first-letter {
+            font-size: 200%;
+            color: purple;
+        }
+
+        .intro::after {
+            content: " ← styled with ::after";
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Task 1: CSS Selectors Practice</h1>
+
+    <h2>Basic Selectors</h2>
+    <p>This is a paragraph (element selector).</p>
+    <div class="highlight">This uses a class selector.</div>
+    <span id="unique">This uses an ID selector.</span>
+
+    <h2>Attribute Selectors</h2>
+    <input type="text" placeholder="Your Name" />
+    <input type="email" placeholder="Email Address" />
+    <a href="https://uetpeshawar.edu.pk" target="_blank">UET Website</a>
+
+    <h2>Combinators</h2>
+    <div class="parent">
+        <p>Descendant combinator</p>
+        <div>
+            <p>Child combinator</p>
+        </div>
+    </div>
+    <p class="sibling">Adjacent sibling</p>
+    <p class="sibling">General sibling</p>
+
+    <h2>Pseudo-classes</h2>
+    <a href="#">Hover over this link</a>
+    <input type="text" placeholder="Focus me" />
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+
+    <h2>Pseudo-elements</h2>
+    <p class="intro">This paragraph uses ::first-letter and ::after.</p>
+</body>
+
+</html>

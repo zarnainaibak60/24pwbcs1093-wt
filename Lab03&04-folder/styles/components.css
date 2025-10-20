@@ -1,0 +1,312 @@
+.btn {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.small {
+  font-size: 12px;
+  padding: 6px 12px;
+}
+
+.medium {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.large {
+  font-size: 20px;
+  padding: 14px 28px;
+}
+
+.rounded {
+  border-radius: 8px;
+  background-color: #2196f3;
+}
+
+.pill {
+  border-radius: 50px;
+  background-color: #9c27b0;
+}
+
+.gradient {
+  background: linear-gradient(to right, #ff5722, #ff9800);
+}
+
+.shadow {
+  background-color: #4caf50;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hover-focus {
+  background-color: #3f51b5;
+}
+
+.hover-focus:hover,
+.hover-focus:focus {
+  background-color: #1a237e;
+  transform: scale(1.05);
+}
+
+.disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.styled-form {
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.styled-form label {
+  font-weight: bold;
+}
+
+.styled-form input,
+.styled-form select {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.styled-form input:focus,
+.styled-form select:focus {
+  border-color: #2196f3;
+  outline: none;
+}
+
+.styled-form button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.styled-form button:hover {
+  background-color: #388e3c;
+}
+
+.error {
+  color: #f44336;
+  font-size: 14px;
+  display: none;
+}
+
+.success {
+  color: #4caf50;
+  font-size: 14px;
+  display: none;
+}
+
+.card-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  width: 250px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card h2 {
+  margin: 10px 0 5px;
+  font-size: 20px;
+}
+
+.card p {
+  padding: 0 10px 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.card .btn {
+  margin-bottom: 15px;
+  background-color: #2196f3;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.nav-horizontal ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 10px 20px;
+  background-color: #2196f3;
+}
+
+.nav-horizontal a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-horizontal a:hover {
+  background-color: #1976d2;
+  border-radius: 4px;
+}
+
+.nav-vertical ul {
+  list-style: none;
+  padding: 10px;
+  background-color: #f5f5f5;
+  width: 200px;
+}
+
+.nav-vertical li {
+  margin-bottom: 10px;
+}
+
+.nav-vertical a {
+  display: block;
+  padding: 8px 12px;
+  background-color: #eee;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-vertical a:hover {
+  background-color: #ddd;
+}
+
+.transform-gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.box {
+  width: 120px;
+  height: 120px;
+  background-color: #2196f3;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: transform 0.4s ease;
+  border-radius: 8px;
+}
+
+.scale:hover {
+  transform: scale(1.2);
+}
+
+.rotate:hover {
+  transform: rotate(15deg);
+}
+
+.translate:hover {
+  transform: translateX(20px);
+}
+
+.skew:hover {
+  transform: skewY(10deg);
+}
+
+.combo:hover {
+  transform: rotate(10deg) scale(1.1) translateY(-10px);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #ff6f00, #ff4081);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.loader-section {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #ccc;
+  border-top: 5px solid #2196f3;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.glass-card {
+  background: url("../images/gallery/WhatsApp\ Image\ 2025-08-23\ at\ 6.47.12\ PM.jpeg")
+    center/cover no-repeat;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  color: white;
+  max-width: 300px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.neon-box {
+  margin: 30px auto;
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+}
+
+.inset-box {
+  margin: 30px auto;
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  background-color: #eee;
+  box-shadow: inset 4px 4px 8px #ccc, inset -4px -4px 8px #fff;
+  border-radius: 10px;
+}
